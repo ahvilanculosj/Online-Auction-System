@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leilões - SecureAuction</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🔒 SecureAuction</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="auctions.html">Leilões</a></li>
+            <li><a href="#" onclick="logout()">Sair</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="page-title">Galeria de Leilões</h1>
+    <div id="alert" class="alert" style="max-width:600px;margin:1rem auto;"></div>
+    <div id="auctionList" class="auction-grid"></div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/auctions.js"></script>
+</body>
+</html>

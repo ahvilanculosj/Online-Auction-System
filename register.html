@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registar - SecureAuction</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🔒 SecureAuction</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="auctions.html">Leilões</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Registar</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <h2>Criar Conta</h2>
+        <div id="alert" class="alert"></div>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="license">Número de Licença</label>
+                <input type="text" id="license" required>
+            </div>
+            <div class="form-group">
+                <label for="pan">Número PAN</label>
+                <input type="text" id="pan" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Palavra-passe</label>
+                <input type="password" id="password" minlength="6" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Tipo de Conta</label>
+                <select id="role">
+                    <option value="customer">Comprador</option>
+                    <option value="seller">Vendedor</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Registar</button>
+        </form>
+        <p style="text-align:center;margin-top:1rem;">
+            Já tem conta? <a href="login.html">Entrar</a>
+        </p>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

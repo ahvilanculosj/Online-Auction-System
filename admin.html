@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - SecureAuction</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🔒 SecureAuction</div>
+        <ul class="nav-links">
+            <li><a href="admin.html">Utilizadores</a></li>
+            <li><a href="auctions.html">Leilões</a></li>
+            <li><a href="#" onclick="logout()">Sair</a></li>
+        </ul>
+    </nav>
+
+    <div class="dashboard">
+        <h1>Painel do Administrador</h1>
+        <div id="alert" class="alert"></div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="totalUsers">0</div>
+                <div class="stat-label">Total Utilizadores</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="pendingUsers">0</div>
+                <div class="stat-label">Pendentes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="blockedUsers">0</div>
+                <div class="stat-label">Bloqueados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalComplaints">0</div>
+                <div class="stat-label">Reclamações</div>
+            </div>
+        </div>
+
+        <h2 style="margin-bottom:1rem;color:#1a2332;">Gestão de Utilizadores</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Nome</th><th>Email</th><th>Tipo</th><th>Estado</th><th>Ações</th></tr>
+                </thead>
+                <tbody id="userTable"></tbody>
+            </table>
+        </div>
+
+        <h2 style="margin:2rem 0 1rem;color:#1a2332;">Reclamações</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Comprador</th><th>Vendedor</th><th>Motivo</th><th>Data</th></tr>
+                </thead>
+                <tbody id="complaintTable"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

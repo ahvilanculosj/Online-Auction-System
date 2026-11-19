@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SecureAuction</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🔒 SecureAuction</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="auctions.html">Leilões</a></li>
+            <li><a href="complaint.html">Reclamação</a></li>
+            <li><a href="#" onclick="logout()">Sair</a></li>
+        </ul>
+    </nav>
+
+    <div class="dashboard">
+        <h1>Bem-vindo, <span id="userName"></span> 👋</h1>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="totalAuctions">0</div>
+                <div class="stat-label">Leilões Disponíveis</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="myBids">0</div>
+                <div class="stat-label">Minhas Licitações</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="myComplaints">0</div>
+                <div class="stat-label">Reclamações Feitas</div>
+            </div>
+        </div>
+
+        <h2 style="margin-bottom:1rem;color:#1a2332;">Leilões Ativos</h2>
+        <div id="auctionList" class="auction-grid"></div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/auctions.js"></script>
+</body>
+</html>

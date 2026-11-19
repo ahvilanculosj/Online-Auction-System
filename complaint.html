@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclamação - SecureAuction</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🔒 SecureAuction</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="auctions.html">Leilões</a></li>
+            <li><a href="#" onclick="logout()">Sair</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <h2>Nova Reclamação</h2>
+        <div id="alert" class="alert"></div>
+        <form id="complaintForm">
+            <div class="form-group">
+                <label for="seller">Nome do Vendedor</label>
+                <input type="text" id="seller" required>
+            </div>
+            <div class="form-group">
+                <label for="product">Produto</label>
+                <input type="text" id="product" required>
+            </div>
+            <div class="form-group">
+                <label for="reason">Motivo da Reclamação</label>
+                <textarea id="reason" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Reclamação</button>
+        </form>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/complaint.js"></script>
+</body>
+</html>
